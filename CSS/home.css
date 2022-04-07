@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Mainpage{
+    background-image: url('../images/bckg.png');
+}
+
+.navbar{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    margin: -5px;
+    align-items: center;
+    padding:0px;
+ 
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+    /* justify-content: right; */
+}
+.logo{
+    margin: 10px;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+/* .banner{
+    height: 500px;
+} */
+
+.getstart{
+    background-color: black  !important;
+    color: rgb(255, 255, 255) !important;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin: 50px;
+    /* margin: 30px; */
+}
+.getstart:hover{
+    background-color: rgb(214, 214, 214)  !important;
+    color: rgb(0, 0, 0) !important;
+}
+/* .banner__heading{
+    color: black;
+    margin-top: -840px;
+    margin-left: 200px;
+} */
+.banner__components{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    color: black !important;
+    margin-top: -650px;
+    margin-left:-70px;
+    justify-content:center ;
+    align-items: center;
+}

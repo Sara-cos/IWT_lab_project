@@ -1,0 +1,31 @@
+.login{
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+body{
+    background-image: linear-gradient(to bottom right,#3b1f11,#e3bd97,#3b1f11);
+    color: white;
+}
+.tab-content{
+    background-image: url('../images/login.jpg');
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black !important;
+}
+.tab-content a{
+    color: black !important;
+    text-decoration: none;
+}
+#loginName{
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+#loginPassword{
+    width: 70%;
+}
