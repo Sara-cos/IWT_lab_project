@@ -2,30 +2,84 @@
     justify-content: center;
     align-items: center;
     width: 500px;
-    height: 600px;
+    height: 600px !important;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
 }
 body{
-    background-image: linear-gradient(to bottom right,#3b1f11,#e3bd97,#3b1f11);
     color: white;
 }
+body img{
+    width: 100%;
+    height: 856px;
+}
+.text-center{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+
+}
 .tab-content{
-    background-image: url('../images/login.jpg');
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    /* background-image: url('../images/login.jpg'); */
+   
+    font-size: 20px;
+    background-color:white;
     color: black !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: -160px;
+    margin-top: -40px;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+    border-radius: 0px 20px 20px 0px;
+
+    
 }
 .tab-content a{
     color: black !important;
     text-decoration: none;
+   
 }
 #loginName{
     width: 70%;
-    justify-content: center;
-    align-items: center;
+}
+.email__pass{
+    margin-left: 130px;
+}
+.register{
+    margin: 35px;
+    padding: 10px;
+}
+.signin{
+    margin-left: 210px;
+}
+.symbol{
+    margin-top: 20px !important;
 }
 #loginPassword{
     width: 70%;
+}
+.login__page{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: max-content;
+    border-radius: 10px;
+    background-color:  rgb(202, 218, 193);
+}
+.bgi{
+    margin: 50px;
+    padding: 10px;
+   
+    
+    /* height: ; */
+}
+.bgi img{
+    display: inline-block;
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    margin-left: 200px;
+    border-radius: 20px 0px 0px 20px;
 }

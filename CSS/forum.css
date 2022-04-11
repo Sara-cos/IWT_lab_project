@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    margin: -5px;
+    align-items: center;
+    padding:0px;
+ 
+}
+.navbar-brand{
+    margin-top: 10px;
+    margin-left: 4px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+   
+}
+.navlog{
+    border-radius: 5px !important;
+}
+.logo{
+    margin: 10px;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
