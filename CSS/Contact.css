@@ -13,8 +13,9 @@ body{margin-top:20px;
             margin-bottom: 60px;
         }
     }
-    .contact__us{
+    .container{
         display: flex;
+        flex-direction:row ;
 
     }
     

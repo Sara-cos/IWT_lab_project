@@ -39,8 +39,8 @@ nav ul li{
 }
 /* body{margin-top:20px;} */
 
-.comment-wrapper .panel-body {
-    max-height:650px;
+.comment-wrapper,.panel-body {
+    /* max-height:650px; */
     overflow:auto;
 }
 
@@ -63,3 +63,33 @@ nav ul li{
 .btn{
     margin: 5px;
 }
+.messagebox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.rightside{
+    display: flex;
+    float: right;
+    text-align: center;
+
+}
+.panel-info{
+    width: 500px;
+    /* margin: 150px; */
+
+    
+}
+.leftside{
+    /* float: left !important; */
+    width: 800px;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    border: 3px solid black !important;
+    border-radius: 10px;
+}
+
