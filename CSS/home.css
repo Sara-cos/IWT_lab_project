@@ -2,20 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'The Nautigal', cursive;
+    
 }
-.Mainpage{
-    background-image: url('../images/bckg.png');
-}
-
 .navbar{
     cursor: pointer;
     display: flex;
-    width: 100%;
+    width: 100vw;
     margin: -5px;
     align-items: center;
     padding:0px;
- 
+    background-color: #262220;
 }
 .navbar-brand{
     margin-top: 10px;
@@ -36,43 +33,52 @@ nav ul{
 }
 .logo{
     margin: 10px;
+    background-color: #F7F1F0;
 }
 nav ul li{
     display: inline-block;
     margin-right: 20px;
-
 }
 a{
     text-decoration: none;
-    color: #555;
+    color: #F7F1F0!important;
 }
-/* .banner{
-    height: 500px;
-} */
 
 .getstart{
-    background-color: rgb(106, 141, 41)  !important;
+    background-color: #262220!important;
     color: white !important;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     padding: 20px;
     margin: 50px;
     border-radius: 5px!important;
-    /* margin: 30px; */
 }
 .getstart:hover{
-    background-color: rgb(214, 214, 214)  !important;
-    color: rgb(45, 69, 9) !important;
+    background-color: #C3A6A0  !important;
+    color: white !important;
 }
-.banner__components{
-    width: 800px;
+.mainpage{
+    width: 100vw;
+    height: 100vh;
+    /* Background styles */
+    background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url("../images/mainpagebck.jpg");
+    background-size: cover;
+    /* background-position: right right; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    margin-top:120px;
+    color:#F7F1F0;
     display: flex;
     flex-direction: column;
-    color: rgb(91, 117, 75) !important;
-    margin-top: -650px;
-    margin-left:-70px;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
-    border-radius: 10px;
+
 }

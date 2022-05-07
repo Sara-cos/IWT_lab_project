@@ -1,5 +1,5 @@
 body{margin-top:20px;
-    background:#eee;
+    background:#F7F1F0;
     }
     .contact-area {
         background: url(../img/bg/contact-bg.png) no-repeat;
@@ -12,10 +12,6 @@ body{margin-top:20px;
         .contact {
             margin-bottom: 60px;
         }
-    }
-    .contact__us{
-        display: flex;
-
     }
     
     .contact input {
@@ -85,7 +81,7 @@ body{margin-top:20px;
         -webkit-transition: all 0.3s ease 0s;
         -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
-        background: #7564e5;
+        background: #C3A6A0;
         font-family: 'poppins', sans-serif;
         cursor: pointer;
         width: 100%;
@@ -93,7 +89,7 @@ body{margin-top:20px;
     
     .btn-contact-bg:hover,
     .btn-contact-bg:focus {
-        background: #232434;
+        background: #A15C38;
         color: #fff;
     }
     
@@ -113,7 +109,7 @@ body{margin-top:20px;
     
     .single_address i {
         background: #f6f6f6;
-        color: #7564e5;
+        color: #C3A6A0;
         border-radius: 30px;
         width: 60px;
         height: 60px;
@@ -131,8 +127,8 @@ body{margin-top:20px;
     }
     
     .single_address:hover i {
-        background: #7564e5;
-        color: #fff;
+        background: #C3A6A0;
+        color: #A15C38;
     }
     
     .single_address h4 {
@@ -167,6 +163,10 @@ body{margin-top:20px;
     .text-center {
         text-align: center!important;
     }
-    .row{
-        width: 500px !important;
+    .form-group{
+        margin: 5px;
+    }
+    .contact__us{
+        background-color: #F7F1F0;
+        color: #262220;
     }
