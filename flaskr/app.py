@@ -15,8 +15,8 @@ config.logger = Logger()
 config.mongo_db = Operations("DB", config.logger)
 api = Api(app)
 
-api.add_resource(Signup, '/api/signup')
-api.add_resource(Login, '/api/login')
+api.add_resource(Signup, '/api/auth/signup')
+api.add_resource(Login, '/api/auth/login')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
