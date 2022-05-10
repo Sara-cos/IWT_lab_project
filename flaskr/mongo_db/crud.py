@@ -19,8 +19,7 @@ class Operations:
             username = os.getenv('MONGO_USERNAME')
             password = os.getenv('MONGO_PASSWORD')
             self.client = pymongo.MongoClient(
-                f"mongodb+srv://{username}:{password}@cluster0.qwvki.mongodb.net/myFirstDatabase?retryWrites=true&w=majority".format(
-                    username=username, password=password), ssl_cert_reqs=ssl.CERT_NONE)
+                "mongodb+srv://test0:test@cluster0.bbyas.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", ssl_cert_reqs=ssl.CERT_NONE)
             self.my_db = self.client[db_name]
             self.result = "connection with database successful"
             self.lg.log("info", self.result)

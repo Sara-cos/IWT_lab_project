@@ -23,7 +23,7 @@ class DB_Handler(Handler):
             # load_dotenv('py_backend/env/mongo_credentials.env')
             username = os.getenv('MONGO_USERNAME')
             password = os.getenv('MONGO_PASSWORD')
-            client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@cluster0.qwvki.mongodb.net/myFirstDatabase?retryWrites=true&w=majority".format(username=username, password=password), ssl_cert_reqs=ssl.CERT_NONE)
+            client = pymongo.MongoClient("mongodb+srv://test0:test@cluster0.bbyas.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", ssl_cert_reqs=ssl.CERT_NONE)
             my_db = client["DB"]
             record = {
                 "levelname": record.levelname,
