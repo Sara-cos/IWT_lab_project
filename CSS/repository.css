@@ -1,0 +1,105 @@
+
+.repo{
+    background-color:#f7f1f0 ;
+}
+.heading{
+    color: #262220;
+    margin: 30px;
+}
+
+.addfile{
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#formFileMultiple{
+    width: 150%;
+}
+.navbar{
+    cursor: pointer;
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    align-items: center;
+    padding:0px;
+    position:fixed;
+    background-color: #262220;
+}
+.navbar-brand{
+    margin-top: 10px;
+    margin-left: 4px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+   
+}
+.navlog{
+    border-radius: 15px !important;
+}
+.logo{
+    margin: 10px;
+    background-color: #F7F1F0;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #F7F1F0!important;
+}
+.btn-common {
+  border-radius: 5px;
+  color: #fff;
+  outline: medium  !important;
+  padding: 15px 27px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background: #c3a6a0!important;
+  font-family: "poppins", sans-serif;
+  cursor: pointer;
+  /* width: 100%; */
+}
+.btn-common:hover,
+.btn-common:focus {
+  background: #a15c38 !important;
+  color: #fff !important;
+}
+
+.allfiles{
+    width: 70%;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#c3a6a0;
+    color: white;
+}
+.repobtn{
+    width: 100px !important;
+    position: relative;
+    margin-left: auto;
+    margin-right: 20px;
+    color: white !important;
+    background: #262220 !important;
+}
+.allfiles .row-5{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+.reponame,.repodesc{
+    margin: 8px;
+}
