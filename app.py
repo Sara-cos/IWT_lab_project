@@ -73,7 +73,9 @@ def edit_user():
 @app.route('/auth/save-edit', methods=["GET", "POST"])
 def save_edit():
     record = request.form
-    print(record)
+    email = session.get("email")
+    password = session.get("password")
+    res = MyWall(email, password).check_password_and_change_information(record)
     return redirect("/auth/user")
 
 

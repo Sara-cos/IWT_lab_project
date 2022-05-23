@@ -44,10 +44,10 @@ class MyWall:
                     "firstname": record["firstname"],
                     "lastname": record["lastname"],
                     "gender": record["gender"],
-                    "phone": record["phone"]
+                    "phone": int(record["phone"])
                 }
             }
-            res = config.mongo_db.my_db.update("users", condition, new_val)
+            res = config.mongo_db.update("users", condition, new_val)
             return res
         except Exception as e:
             return {"status": False, "message": "Internal server error"}
