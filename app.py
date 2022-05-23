@@ -70,6 +70,13 @@ def edit_user():
         return redirect("/auth/login")
 
 
+@app.route('auth/save-edit', methods=["GET", "POST"])
+def save_edit():
+    record = request.form
+    print(record)
+    return redirect("/auth/user")
+
+
 @app.route('/auth/signup', methods=['GET', 'POST'])
 def signup_page():
     return render_template('Registration.html')

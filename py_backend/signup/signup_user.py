@@ -24,7 +24,7 @@ class Registration:
 
     def insert_to_db(self):
         try:
-            check_existence = config.mongo_db.my_db['User'].find({"email": self.user_data['email']})
+            check_existence = config.mongo_db.my_db['users'].find({"email": self.user_data['email']})
             if len(list(check_existence)) == 0:
                 res = config.mongo_db.insert_one("users", self.user_data)
                 return res
