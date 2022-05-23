@@ -12,7 +12,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('Home.html')
+    return render_template('Mywalledit.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
