@@ -18,7 +18,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('Mywalledit.html')
+    return render_template('Home.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
@@ -55,6 +55,17 @@ def show_user():
     res = MyWall(email, password).check_password_and_retrieve()
     if res["status"]:
         return render_template("MyWall.html", **res["message"])
+    else:
+        return redirect("/auth/login")
+
+
+@app.route('/auth/edit-user', methods=["GET", "POST"])
+def edit_user():
+    email = session.get("email")
+    password = session.get("password")
+    res = MyWall(email, password).check_password_and_retrieve()
+    if res["status"]:
+        return render_template("MyWalledit.html", **res["message"])
     else:
         return redirect("/auth/login")
 
