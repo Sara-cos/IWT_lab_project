@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/Registration.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='Registration.css')}}">
     <title>Registration</title>
 </head>
 <body>
     <div class="container">
         <div class="title">Registration</div>
-        <form action="#">
+        <form action="/auth/registration" method="POST" >
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">First Name</span>
@@ -38,9 +38,9 @@
                 </div>
             </div>
             <div class="gender-details">
-                <input type="radio" name="gender" id="dot-1">
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
+                <input type="radio" name="gender" id="dot-1" value="Male">
+                <input type="radio" name="gender" id="dot-2" value="Female">
+                <input type="radio" name="gender" id="dot-3" value="Other">
                 <span class="gender-title">Gender</span>
                 <div class="catagory">
                     <label for="dot-1">
