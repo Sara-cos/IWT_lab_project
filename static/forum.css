@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    margin: -5px;
+    align-items: center;
+    padding:0px;
+ 
+}
+.navbar-brand{
+    margin-top: 10px;
+    margin-left: 4px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+   
+}
+.navlog{
+    border-radius: 5px !important;
+}
+.logo{
+    margin: 10px;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+/* body{margin-top:20px;} */
+
+.comment-wrapper,.panel-body {
+    /* max-height:650px; */
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+.postbtn{
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   padding: 5px;
+}
+.btn{
+    margin: 5px;
+}
+.messagebox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.rightside{
+    display: flex;
+    float: right;
+    text-align: center;
+
+}
+.panel-info{
+    width: 500px;
+    /* margin: 150px; */
+
+    
+}
+.leftside{
+    /* float: left !important; */
+    width: 800px;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    border: 3px solid black !important;
+    border-radius: 10px;
+}
+
