@@ -14,7 +14,7 @@ class Registration:
             self.user_data = {
                 "firstname": record["First Name"],
                 "lastname": record["Last Name"],
-                "email": record["Email"],
+                "email": record["Email"].lower(),
                 "phone": int(record["Phone Number"]),
                 "password": generate_password_hash(record["Password"]),
                 "gender": record["gender"]

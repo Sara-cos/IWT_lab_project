@@ -6,7 +6,7 @@ class Validation:
 
     def __init__(self, email, password):
         try:
-            self.email = email
+            self.email = email.lower()
             self.password = password
         except Exception as e:
             config.logger.log("ERROR", str(e))
