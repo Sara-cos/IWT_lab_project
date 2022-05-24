@@ -11,13 +11,14 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Exam Portal</title>
   </head>
   <!-- Nav Bar -->
   <body class="mainpage">
     <header>
       <div class="nav__bar">
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <button
               class="navbar-toggler"
@@ -39,40 +40,21 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Services
+                    ><b>Home</b>
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="./question.html">Exam Portal</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./Forum.html">Posts</a>
-                    </li>
-                  </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./Contact.html">Contact Us</a>
+                  <a class="nav-link" href="./Contact.html"
+                    ><b>Contact Us</b></a
+                  >
                 </li>
               </ul>
               <a
                 class="btn btn-outline navlog"
-                href="/auth/login" 
+                href="/auth/login"
                 role="button"
-                
               >
-                <b>LogIn | Register</b>
+                <b>Login | Register</b>
               </a>
             </div>
           </div>
@@ -81,8 +63,10 @@
     </header>
     <section>
       <div class="banner">
-        <h1 class="banner__heading ">WELCOME TO EXAM PORTAL!</h1>
-        <h3 class="banner__heading">Get that correct experience with us.</h3>
+        <h1 class="banner__heading">WELCOME TO EXAM PORTAL!</h1>
+        <h4 class="banner__subheading">
+          If You believe in yourself anything is possible.
+        </h4>
         <a
           class="btn btn-outline-light getstart btn-lg"
           href="/auth/login"
@@ -93,4 +77,5 @@
     </section>
   </body>
   <!-- <footer></footer> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </html>
