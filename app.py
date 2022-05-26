@@ -92,16 +92,10 @@ def registration():
         confirm_password = request.form["Confirm Password"]
         if password == confirm_password:
             res = Registration(record).insert_to_db()
-<<<<<<< HEAD
-        else:
-            res =  {"status": False, "message": "Password does not match"}
-        return render_template("Registration.html", results=res["message"])
-=======
             return redirect('/login-page')
         else:
             res = {"status": False, "message": "Password does not match"}
             return render_template("/auth/signup", results=res["message"])
->>>>>>> 0e165eb2313a9cfec2b3a9773a11f9521a1335d2
 
 
 if __name__ == '__main__':
