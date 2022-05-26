@@ -1,15 +1,54 @@
 .mywall{
-    background-color: #F7F1F0;
+    background-color: #fff;
 }
 body{
     margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f0;    
+    background-color: #fff;    
 }
 .main-body {
     padding: 15px;
 }
+.navbar {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    padding: 0px;
+    background-color: transparent;
+  }
+  .navbar-brand {
+    margin-top: 10px;
+    margin-left: 4px;
+  }
+  nav {
+    flex: 1;
+    text-align: right;
+  }
+  nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+  }
+  .navlog {
+    background-color: white !important;
+    color: #111 !important;
+    position: relative;
+    border-radius: 0px !important;
+  }
+  .navlog:hover {
+    background-color: #d8d8d8 !important;
+  }
+  .logo {
+    margin: 10px;
+    background-color: #ffffff;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
 .card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
@@ -53,5 +92,11 @@ body{
 }
 .shadow-none {
     box-shadow: none!important;
+}
+#button{
+    background: #313023;
+    color: white;
+    border:solid black;
+    border-radius: 0px !important;
 }
 
