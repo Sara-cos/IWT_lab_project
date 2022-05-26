@@ -5,23 +5,24 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: linear-gradient(to top, #7187e6, #9b59b6);
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #a19d85; 
+    
 }
-body:hover {
-  background: linear-gradient(-135deg, #7187e6, #9b59b6);
-}
-.container {
-  max-width: 700px;
-  width: 100%;
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
+/* body:hover{
+    background: linear-gradient(-135deg,#7187e6,#9b59b6);
+} */
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
 }
 .container .title {
   font-size: 25px;
@@ -112,11 +113,11 @@ form .button input {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, #7187e6, #9b59b6);
+  background:#313023 ;
 }
-form .button input:hover {
-  background: linear-gradient(-135deg, #7187e6, #9b59b6);
-}
+/* form .button input:hover {
+  background: #313023;
+} */
 .Result {
   text-align: center;
   justify-content: center;
