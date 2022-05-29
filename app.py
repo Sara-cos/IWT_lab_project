@@ -6,6 +6,7 @@ from py_backend.login.login_user import Validation
 import config
 from flask_session import Session
 from py_backend.my_wall.display import MyWall
+from py_backend.questions.questions import Question
 
 
 app = Flask(__name__)
@@ -96,6 +97,18 @@ def registration():
         else:
             res = {"status": False, "message": "Password does not match"}
             return render_template("/auth/signup", results=res["message"])
+
+
+@app.route("/set-question", methods=['GET', 'POST'])
+def set_question():
+    pass
+
+
+@app.route("/get-question", methods=['GET', 'POST'])
+def get_question():
+    exam_id = request.form["exam_id"]
+    question = Question().get_all_questions(exam_id)
+    return question
 
 
 if __name__ == '__main__':
