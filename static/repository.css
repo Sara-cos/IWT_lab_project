@@ -1,71 +1,35 @@
+.repo {
+  background-color: #f7f1f0;
+}
+.heading {
+  color: #262220;
+  margin: 30px;
+}
 
-.repo{
-    background-color:#f7f1f0 ;
+.addfile {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.heading{
-    color: #262220;
-    margin: 30px;
+.input-group-text {
+  color: white !important;
+  background-color: #262220 !important;
+  margin-top: 15px;
 }
-
-.addfile{
-    align-items:center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-#formFileMultiple{
-    width: 150%;
-}
-.navbar{
-    cursor: pointer;
-    display: flex;
-    width: 100vw;
-    height: fit-content;
-    align-items: center;
-    padding:0px;
-    position:fixed;
-    background-color: #262220;
-}
-.navbar-brand{
-    margin-top: 10px;
-    margin-left: 4px;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-    margin: 10px;
-   
-}
-.navlog{
-    border-radius: 15px !important;
-}
-.logo{
-    margin: 10px;
-    background-color: #F7F1F0;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-a{
-    text-decoration: none;
-    color: #F7F1F0!important;
+.input-group > .form-control {
+  margin-top: 15px;
 }
 .btn-common {
   border-radius: 5px;
   color: #fff;
-  outline: medium  !important;
+  outline: medium !important;
   padding: 15px 27px;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background: #c3a6a0!important;
+  background: #262220 !important;
   font-family: "poppins", sans-serif;
   cursor: pointer;
   /* width: 100px !important; */
@@ -75,33 +39,37 @@ a{
   background: #a15c38 !important;
   color: #fff !important;
 }
-
-.allfiles{
-    width: 70%;
-    border-radius: 10px;
-    display: flex;
-    padding: 10px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#c3a6a0;
-    color: white;
+/* .fileinput {
+  margin-top: 5px;
+  align-items: center;
+} */
+.allfiles {
+  width: 70%;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d9d9c4;
+  color: #262220;
 }
-.repobtn{
-    width: 100px !important;
-    position: relative;
-    margin-left: auto;
-    margin-right: 20px;
-    color: white !important;
-    background: #262220 !important;
+.repobtn {
+  width: 100px !important;
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+  color: white !important;
+  background: #262220 !important;
 }
-.allfiles .row-5{
-    display: flex;
-    margin: 20px;
-    flex-direction: column;
+.allfiles .row-5 {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
 }
-.reponame,.repodesc{
-    margin: 8px;
+.reponame,
+.repodesc {
+  margin: 8px;
 }
 ol,
 ul {
@@ -295,22 +263,24 @@ nav .profile-details i {
   padding-top: 104px;
 }
 .card {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 5px;
+  background-color: #d9d9c4 !important;
 }
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 0 solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-  }
-  
-  .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1rem;
-  }
+/* .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+} */
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
