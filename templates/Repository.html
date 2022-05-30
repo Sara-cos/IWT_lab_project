@@ -11,180 +11,141 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Repository</title>
   </head>
-  <body class="repo">
+  <body>
     <!---Nav Bar---->
-    <div class="sidebar">
-      <div class="logo-details">
-        <i class="bx bxl-c-plus-plus"></i>
-        <span class="logo_name">Exam Portal</span>
+    <div class="repo">
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class="bx bxl-c-plus-plus"></i>
+          <span class="logo_name">Exam Portal</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/auth/user">
+              <i class="bx bx-grid-alt"></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/auth/my-wall">
+              <i class="bx bxs-user-account"></i>
+              <span class="links_name">My Wall</span>
+            </a>
+          </li>
+          <li>
+            <a href="/question-page">
+              <i class="bx bx-box"></i>
+              <span class="links_name">Exam Portal</span>
+            </a>
+          </li>
+          <li>
+            <a href="/auth/forum">
+              <i class="bx bx-list-ul"></i>
+              <span class="links_name">Forum</span>
+            </a>
+          </li>
+          <li>
+            <a href="/auth/repo" class="active">
+              <i class="bx bx-file"></i>
+              <span class="links_name">Repository</span>
+            </a>
+          </li>
+          <li>
+            <a href="/auth/contactus">
+              <i class="bx bx-phone-call"></i>
+              <span class="links_name">Contact Us</span>
+            </a>
+          </li>
+          <li class="log_out">
+            <a href="/auth/logout">
+              <i class="bx bx-log-out"></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#">
-            <i class="bx bx-grid-alt"></i>
-            <span class="links_name">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="/auth/user" class="active">
-            <i class="bx bxs-user-account"></i>
-            <span class="links_name">My Wall</span>
-          </a>
-        </li>
-        <li>
-          <a href="/auth/ques">
-            <i class="bx bx-box"></i>
-            <span class="links_name">Exam Portal</span>
-          </a>
-        </li>
-        <li>
-          <a href="/auth/forum">
-            <i class="bx bx-list-ul"></i>
-            <span class="links_name">Forum</span>
-          </a>
-        </li>
-        <li>
-          <a href="/auth/contactus">
-            <i class="bx bx-coin-stack"></i>
-            <span class="links_name">Contact Us</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="bx bx-user"></i>
-            <span class="links_name">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="bx bx-cog"></i>
-            <span class="links_name">Setting</span>
-          </a>
-        </li>
-        <li class="log_out">
-          <a href="#">
-            <i class="bx bx-log-out"></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <section class="home-section">
-      <nav>
-        <div class="sidebar-button">
-          <i class="bx bx-menu sidebarBtn"></i>
-          <span class="dashboard">Dashboard</span>
-        </div>
-        <div class="profile-details">
-          <span class="Timer"><i class="bx bx-time"></i>Time 5:15PM</span>
-        </div>
-        <div class="profile-details">
-          <a href="/auth/user">
-            <img src="images/profile.jpg" alt="" />
-            <span class="admin_name">{{firstname}}</span>
-            <i class="bx bx-chevron-right"></i>
-          </a>
-        </div>
-      </nav>
-      <div class="card">
-        <div class="addfile">
-          <h1 class="card-title heading">Repository</h1>
-          <div class="row fileinput m-3">
-            <div class="col-sm-2 card-body">
-              <input
-                class="form-control"
-                type="file"
-                id="formFileMultiple"
-                multiple
-              />
+
+      <!-- heading Section -->
+
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class="bx bx-menu sidebarBtn"></i>
+            <span class="dashboard">Repository</span>
+          </div>
+          <div class="profile-details">
+            <span class="Timer"><i class="bx bx-time"></i>Time 5:15PM</span>
+          </div>
+          <div class="profile-details">
+            <a href="/auth/user">
+              <!-- <img src="images/profile.jpg" alt=""> -->
+              <span class="admin_name">{{firstname}} {{lastname}}</span>
+              <i class="bx bx-chevron-right"></i>
+            </a>
+          </div>
+        </nav>
+        <!-- Add file -->
+
+        <div class="addfile home-content">
+          <div class="card">
+            <div class="card-title">Add Your File</div>
+            <div class="fileinput align-items-center m-3">
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02" />
+                <label class="input-group-text" for="inputGroupFile02"
+                  >Upload</label
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="allfiles">
+          <div class="col">
+            <div class="row-5 border-2 border-dark">
+              <div class="reponame">
+                <h3>
+                  {% for your_list_element in your_list %}
+                  <p>{{ your_list_element }}</p>
+                  <div></div>
+                  <div class="d-flex">
+                    <button
+                      class="btn btn-common repobtn"
+                      type="submit"
+                      title="Remove"
+                    >
+                      Remove
+                    </button>
+                    <button
+                      class="btn btn-common repobtn"
+                      type="submit"
+                      title="Remove"
+                    >
+                      Download
+                    </button>
+                  </div>
+                  {% endfor %}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
   </body>
 </html>
-
-<div class="card">
-  <div class="addfile">
-    <h1 class="card-title heading">Repository</h1>
-    <div class="row fileinput m-3">
-      <div class="col-sm-2 card-body">
-        <input
-          class="form-control"
-          type="file"
-          id="formFileMultiple"
-          multiple
-        />
-      </div>
-      <div class="col-sm-2">
-        <button class="btn btn-common" type="submit">Upload</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="allfiles">
-  <div class="col">
-    <div class="row-5 border-2 border-dark">
-      <div class="reponame"><h3>Repository Name</h3></div>
-      <div class="repodesc">
-        <h6>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          dignissimos veritatis reprehenderit ut nulla consectetur inventore
-          minima.
-        </h6>
-      </div>
-      <div class="repo"></div>
-      <button class="btn btn-common repobtn" type="submit" title="Remove">
-        Remove
-      </button>
-    </div>
-    <div class="row-5 border-2 border-dark">
-      <div class="reponame"><h3>Repository Name</h3></div>
-      <div class="repodesc">
-        <h6>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          dignissimos veritatis reprehenderit ut nulla consectetur inventore
-          minima, facilis vitae ab illum debitis sunt. Distinctio laudantium
-          animi beatae porro inventore rem?
-        </h6>
-      </div>
-      <div class="repo"></div>
-      <button class="btn btn-common repobtn" type="submit" title="Remove">
-        Remove
-      </button>
-    </div>
-    <div class="row-5 border-2 border-dark">
-      <div class="reponame"><h3>Repository Name</h3></div>
-      <div class="repodesc">
-        <h6>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          dignissimos veritatis reprehenderit ut nulla consectetur inventore
-          minima, facilis vitae ab illum debitis sunt. Distinctio laudantium
-          animi beatae porro inventore rem?
-        </h6>
-      </div>
-      <div class="repo"></div>
-      <button class="btn btn-common repobtn" type="submit" title="Remove">
-        Remove
-      </button>
-    </div>
-    <div class="row-5 border-2 border-dark">
-      <div class="reponame"><h3>Repository Name</h3></div>
-      <div class="repodesc">
-        <h6>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          dignissimos veritatis reprehenderit ut nulla consectetur inventore
-          minima, facilis vitae ab illum debitis sunt. Distinctio laudantium
-          animi beatae porro inventore rem?
-        </h6>
-      </div>
-      <div class="repo"></div>
-      <button class="btn btn-common repobtn" type="submit" title="Remove">
-        Remove
-      </button>
-    </div>
-  </div>
-</div>
