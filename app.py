@@ -23,12 +23,12 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('Dashboard.html')
+    return render_template('Home.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
 def login_page():
-    if not session.get('email'):
+    if not session.get('email') or session["email"] is None:
         return render_template('login.html')
     return redirect('/auth/user')
 
@@ -50,7 +50,7 @@ def login():
             session["email"] = email
             session["password"] = password
             return redirect('/auth/user')
-        return render_template("/auth/login", results=res["message"])
+        return redirect("/auth/login")
 
 
 @app.route('/auth/user', methods=["GET", "POST"])
