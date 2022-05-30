@@ -104,11 +104,72 @@
           </a>
         </div>
       </nav>
+    
       <div class="container home-content">
+        <div class="textbox">
+          <form action="/post-feed" method="post">
+            <p><b>Write A New Post-</b></p>
+            <input type="text" size="100" id="text-box" name="description">
+        </div>
+        <div class="button">
+          <div class="col-sm-12">
+            <button class="btn btn-info" id="button" name="description"  >Post</button>
+          </div>
+          <div class="col-sm-12">
+            <input class="btn btn-info" id="button" type="reset"></input>
+          </div>
+        </div>
+      </form>
         <div class="main-body p-0">
           <div class="inner-wrapper">
               <div class="inner-main-body p-2 p-sm-3 collapse forum-content show">
                 <div class="card mb-2">
+                  <div class="card-body p-2 p-sm-3">                
+                    {% for email, description, time in your_list %}
+                    <div class="media forum-item">
+                      <a
+                        href="#"
+                        data-toggle="collapse"
+                        data-target=".forum-content"
+                        ><img
+                          src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                          class="mr-3 rounded-circle"
+                          width="50"
+                          alt="User"
+                      /></a>
+                      <div class="media-body">
+                        <h6>
+                          <a
+                            href="#"
+                            data-toggle="collapse"
+                            data-target=".forum-content"
+                            class="text-body"
+                            >{{email}}</a
+                          >
+                        </h6>
+                        <p class="text-secondary">
+                          {{description}}
+                        </p>
+                        <p class="text-muted">
+                          <a href="javascript:void(0)"></a> 
+                          <span class="text-secondary font-weight-bold"
+                            >{{time}}</span
+                          >
+                        </p>
+                      </div>
+                      <div
+                        class="text-muted small text-center align-self-center"
+                      >
+                        <span class="d-none d-sm-inline-block"
+                          ><i class="far fa-eye"></i> 19</span
+                        >
+                        <span><i class="far fa-comment ml-2"></i> 3</span>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <!-- <div class="card mb-2">
                   <div class="card-body p-2 p-sm-3">
                     <div class="media forum-item">
                       <a
@@ -153,52 +214,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card mb-2">
-                  <div class="card-body p-2 p-sm-3">
-                    <div class="media forum-item">
-                      <a
-                        href="#"
-                        data-toggle="collapse"
-                        data-target=".forum-content"
-                        ><img
-                          src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                          class="mr-3 rounded-circle"
-                          width="50"
-                          alt="User"
-                      /></a>
-                      <div class="media-body">
-                        <h6>
-                          <a
-                            href="#"
-                            data-toggle="collapse"
-                            data-target=".forum-content"
-                            class="text-body"
-                            >Realtime fetching data</a
-                          >
-                        </h6>
-                        <p class="text-secondary">
-                          lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                          lorem ipsum dolor sit amet
-                        </p>
-                        <p class="text-muted">
-                          <a href="javascript:void(0)">drewdan</a> replied
-                          <span class="text-secondary font-weight-bold"
-                            >13 minutes ago</span
-                          >
-                        </p>
-                      </div>
-                      <div
-                        class="text-muted small text-center align-self-center"
-                      >
-                        <span class="d-none d-sm-inline-block"
-                          ><i class="far fa-eye"></i> 19</span
-                        >
-                        <span><i class="far fa-comment ml-2"></i> 3</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+                 -->
               <!-- /Forum List -->
 
               <!-- Forum Detail -->

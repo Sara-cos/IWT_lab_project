@@ -23,7 +23,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('ForumExtended.html')
+    return render_template('Home.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
@@ -208,7 +208,7 @@ def forum():
     posts = []
     for post in config.mongo_db.my_db["post"].find():
         posts.append([post["email"], post["description"], post["time"]])
-    return posts
+    return render_template("ForumExtended.html", your_list=posts)
 
 
 if __name__ == '__main__':

@@ -3,6 +3,7 @@ body {
   color: #1a202c;
   text-align: left;
   background-color: #e2e8f0;
+  font-family: sans-serif;
 }
 .inner-wrapper {
   position: relative;
@@ -320,4 +321,24 @@ nav .profile-details i {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1rem;
+}
+.textbox{
+  display: flex;
+  width: 100px;
+  height: 350px;
+  text-align:start;
+  border-radius: 5px black;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+#text-box {
+  height: 200px;
+  font-size: 14pt;
+  width: 400px;
+}
+.button{
+  display: inline-flex;
+  margin-left: 80px;
+  margin-top:-20px;
+
 }
