@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 ## edit below variables as per your requirements -
 REPO_NAME = "IWT_lab_project"
 AUTHOR_USER_NAME = "shubhamgantayat"
-SRC_REPO = "flaskr"
+SRC_REPO = "py_backend"
 LIST_OF_REQUIREMENTS = []
 
 

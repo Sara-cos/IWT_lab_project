@@ -10,7 +10,7 @@
     <h1><b>Question</b></h1>
     <div class="container">
         <!-- <div class="title">Registration</div> -->
-        <form action="/auth/registration" method="POST">
+        <form action="/set-question" method="POST">
           <div class="user-details">
             <div class="input-box">
               <span class="details">Enter Question</span>
@@ -63,6 +63,15 @@
                 type="text"
                 name="Correct Option"
                 placeholder="Correct Option"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Exam ID</span>
+              <input
+                type="text"
+                name="Exam ID"
+                placeholder="Exam ID"
                 required
               />
             </div>
