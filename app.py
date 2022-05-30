@@ -18,7 +18,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('Qdemo.html')
+    return render_template('Contact.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
@@ -54,7 +54,7 @@ def show_user():
     password = session.get("password")
     res = MyWall(email, password).check_password_and_retrieve()
     if res["status"]:
-        return render_template("MyWall.html", **res["message"])
+        return render_template("Dashboard.html", **res["message"])
     else:
         return redirect("/auth/login")
 
@@ -91,7 +91,7 @@ def registration():
         password = request.form["Password"]
         confirm_password = request.form["Confirm Password"]
         if password == confirm_password:
-            res = Registrgitation(record).insert_to_db()
+            res = Registration(record).insert_to_db()
             return redirect('/auth/login')
         else:
             res = {"status": False, "message": "Password does not match"}

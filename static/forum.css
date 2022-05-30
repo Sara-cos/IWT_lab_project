@@ -2,22 +2,6 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.navbar {
-  background-color: #45b8ff;
-}
-.navbar-brand {
-  margin-right: 3px !important;
-  font-size: large;
-}
-.category {
-  background-color: #45b8ff;
-}
-.forum-col {
-  min-width: 256px;
-}
-.last-post-col {
-  min-width: 192px;
-}
 
 /* Nav Bar */
 ol,
@@ -99,7 +83,7 @@ ul {
 }
 .home-section {
   position: relative;
-  background: #f5f5f5;
+  background-color: #f2f3e8 !important;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
@@ -156,21 +140,7 @@ nav .search-box input {
   font-size: 18px;
   padding: 0 15px;
 }
-/* nav .search-box .bx-search {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background: #2697ff;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 4px;
-  line-height: 40px;
-  text-align: center;
-  color: #fff;
-  font-size: 22px;
-  transition: all 0.4 ease;
-} */
+
 .home-section nav .profile-details a {
   display: flex;
   text-decoration: none;
@@ -218,4 +188,24 @@ nav .profile-details i {
   font-size: 25px;
   color: #333;
   align-items: center;
+}
+.home-section .home-content {
+  position: relative;
+  padding-top: 90px;
+}
+.table-responsive {
+  display: inline-table !important;
+}
+.table .thead-light th {
+  color: #fff !important;
+  background-color: #464130 !important;
+}
+.table td,
+.table th {
+  background-color: #d9d9c4 !important;
+}
+a {
+  color: black !important;
+  text-decoration: none;
+  font-weight: 600;
 }

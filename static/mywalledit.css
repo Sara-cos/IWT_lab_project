@@ -226,3 +226,7 @@ nav .profile-details i {
   border: solid black;
   border-radius: 0px !important;
 }
+.home-section .home-content {
+  position: relative;
+  padding-top: 104px;
+}
