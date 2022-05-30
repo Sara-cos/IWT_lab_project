@@ -1,70 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Portal</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='question.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='question.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="start_btn"><button>Start Quiz</button></div>
 
     <div class="info_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
-        <div class="info-list">
-            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, it can't be undone.</div>
-            <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+      <div class="info-title"><span>Some Rules of this Quiz</span></div>
+      <div class="info-list">
+        <div class="info">
+          1. You will have only <span>15 seconds</span> per each question.
         </div>
-        <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Continue</button>
+        <div class="info">
+          2. Once you select your answer, it can't be undone.
         </div>
+        <div class="info">
+          3. You can't select any option once time goes off.
+        </div>
+        <div class="info">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="info">
+          5. You'll get points on the basis of your correct answers.
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="quit">Exit Quiz</button>
+        <button class="restart">Continue</button>
+      </div>
     </div>
     <div class="quiz_box">
-        <header>
-            <div class="title">Quiz Portal</div>
-            <div class="timer">
-                <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">15</div>
-            </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div class="que_text">
-            </div>
-            <div class="option_list">
-            </div>
-        </section>
+      <header>
+        <div class="title">Quiz Portal</div>
+        <div class="timer">
+          <div class="time_left_txt">Time Left</div>
+          <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+      </header>
+      <section>
+        <div class="que_text"></div>
+        <div class="option_list"></div>
+      </section>
 
-        <footer>
-            <div class="total_que">
-            </div>
-            <button class="next_btn">Next Que</button>
-        </footer>
+      <footer>
+        <div class="total_que"></div>
+        <button class="next_btn">Next Que</button>
+      </footer>
     </div>
     <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">You've completed the Quiz!</div>
-        <div class="score_text">
-        </div>
-        <div class="buttons">
-            <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
-        </div>
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text"></div>
+      <div class="buttons">
+        <button class="restart">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
     </div>
 
-    <script src="question.js"></script>
+    <script>
+      let questions = [
+        {
+          numb: 1,
+          question: "What does HTML stand for?",
+          answer: "Hyper Text Markup Language",
+          options: [
+            "Hyper Text Preprocessor",
+            "Hyper Text Markup Language",
+            "Hyper Text Multiple Language",
+            "Hyper Tool Multi Language",
+          ],
+        },
+        {
+          numb: 2,
+          question: "What does CSS stand for?",
+          answer: "Cascading Style Sheet",
+          options: [
+            "Common Style Sheet",
+            "Colorful Style Sheet",
+            "Computer Style Sheet",
+            "Cascading Style Sheet",
+          ],
+        },
+        {
+          numb: 3,
+          question: "What does PHP stand for?",
+          answer: "Hypertext Preprocessor",
+          options: [
+            "Hypertext Preprocessor",
+            "Hypertext Programming",
+            "Hypertext Preprogramming",
+            "Hometext Preprocessor",
+          ],
+        },
+        {
+          numb: 4,
+          question: "What does SQL stand for?",
+          answer: "Structured Query Language",
+          options: [
+            "Stylish Question Language",
+            "Stylesheet Query Language",
+            "Statement Question Language",
+            "Structured Query Language",
+          ],
+        },
+        {
+          numb: 5,
+          question: "What does XML stand for?",
+          answer: "eXtensible Markup Language",
+          options: [
+            "eXtensible Markup Language",
+            "eXecutable Multiple Language",
+            "eXTra Multi-Program Language",
+            "eXamine Multiple Language",
+          ],
+        },
+      ];
+
+      start_btn.onclick = () => {
+        info_box.classList.add("activeInfo");
+      };
+
+      exit_btn.onclick = () => {
+        info_box.classList.remove("activeInfo");
+      };
+
+      continue_btn.onclick = () => {
+        info_box.classList.remove("activeInfo");
+        quiz_box.classList.add("activeQuiz");
+        showQuetions(0);
+        queCounter(1);
+        startTimer(15);
+        startTimerLine(0);
+      };
+
+      let timeValue = 15;
+      let que_count = 0;
+      let que_numb = 1;
+      let userScore = 0;
+      let counter;
+      let counterLine;
+      let widthValue = 0;
+
+      const restart_quiz = result_box.querySelector(".buttons .restart");
+      const quit_quiz = result_box.querySelector(".buttons .quit");
+    </script>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
