@@ -22,11 +22,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-<<<<<<< HEAD
-    return render_template('Dashboard.html')
-=======
-    return render_template('Home.html')
->>>>>>> 93a7b8439f6480dd21507566a3a2ca7a89509a36
+    return render_template('Repository.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
