@@ -201,6 +201,11 @@ def repo_delete():
     return "done"
 
 
+@app.route("/forum", methods=["GET", "POST"])
+def forum():
+    pass
+
+
 if __name__ == '__main__':
     config.logger.log("INFO", "App starting")
     app.run(debug=True)
