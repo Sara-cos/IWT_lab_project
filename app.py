@@ -10,6 +10,7 @@ from py_backend.my_wall.display import MyWall
 from py_backend.questions.questions import Question
 from uuid import uuid1
 import os
+from datetime import datetime
 
 
 app = Flask(__name__)
@@ -27,7 +28,7 @@ def home_page():
 
 @app.route('/auth/login', methods=['GET', 'POST'])
 def login_page():
-    if not session.get('email'):
+    if not session.get('email') or session["email"] is None:
         return render_template('login.html')
     return redirect('/auth/user')
 
@@ -49,7 +50,7 @@ def login():
             session["email"] = email
             session["password"] = password
             return redirect('/auth/user')
-        return render_template("/auth/login", results=res["message"])
+        return redirect("/auth/login")
 
 
 @app.route('/auth/user', methods=["GET", "POST"])
@@ -191,10 +192,23 @@ def repo_delete():
     return redirect('/repo-show')
 
 
+@app.route("/post-feed", methods=["GET", "POST"])
+def post_feed():
+    record = dict(
+        description=request.form["description"],
+        email=session["email"],
+        time=str(datetime.now())
+    )
+    config.mongo_db.insert_one("post", record)
+    return redirect("/forum")
+
 
 @app.route("/forum", methods=["GET", "POST"])
 def forum():
-    pass
+    posts = []
+    for post in config.mongo_db.my_db["post"].find():
+        posts.append([post["email"], post["description"], post["time"]])
+    return posts
 
 
 if __name__ == '__main__':
