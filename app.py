@@ -22,7 +22,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('Home.html')
+    return render_template('Repository.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
@@ -59,6 +59,17 @@ def show_user():
     res = MyWall(email, password).check_password_and_retrieve()
     if res["status"]:
         return render_template("Dashboard.html", **res["message"])
+    else:
+        return redirect("/auth/login")
+
+
+@app.route("/auth/my-wall", methods=["GET", "POST"])
+def my_wall():
+    email = session.get("email")
+    password = session.get("password")
+    res = MyWall(email, password).check_password_and_retrieve()
+    if res["status"]:
+        return render_template("MyWall.html", **res["message"])
     else:
         return redirect("/auth/login")
 
@@ -104,7 +115,7 @@ def registration():
 
 @app.route("/question-page", methods=["GET", "POST"])
 def question_page():
-    return render_template("Qdemo.html")
+    return render_template("question.html")
 
 
 @app.route("/set-question", methods=['GET', 'POST'])
@@ -161,7 +172,7 @@ def repo_show():
     for file in config.mongo_db.my_db.fs.files.find({"email": email}):
         files.append(file["filename"])
     print(files)
-    return str(files)
+    return render_template("Repository.html", your_list=["a", "b", "c"])
 
 
 @app.route("/repo-download", methods=['GET', 'POST'])
