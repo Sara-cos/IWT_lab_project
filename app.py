@@ -18,7 +18,7 @@ config.mongo_db = Operations("ExamPortal", config.logger)
 
 @app.route('/', methods=['GET', 'POST'])
 def home_page():
-    return render_template('Forum.html')
+    return render_template('Qdemo.html')
 
 
 @app.route('/auth/login', methods=['GET', 'POST'])
@@ -91,7 +91,7 @@ def registration():
         password = request.form["Password"]
         confirm_password = request.form["Confirm Password"]
         if password == confirm_password:
-            res = Registration(record).insert_to_db()
+            res = Registrgitation(record).insert_to_db()
             return redirect('/auth/login')
         else:
             res = {"status": False, "message": "Password does not match"}
