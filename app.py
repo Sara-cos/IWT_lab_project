@@ -151,18 +151,10 @@ def submit_exam():
 
 @app.route("/repo-push", methods=["GET", "POST"])
 def repo_push():
+    file = request.files['file']
     fs = gridfs.GridFS(config.mongo_db.my_db)
-
-    # define an image object with the location.
-    file = "ZiClJf-1920w.jpg"
-
-    # Open the image in read-only format.
-    with open(file, 'rb') as f:
-        contents = f.read()
-
-    # Now store/put the image via GridFs object.
-    fs.put(contents, filename=file, email=session["email"])
-    return "True"
+    fs.put(file.read(), filename=file.filename, email=session["email"])
+    return redirect("/repo-show")
 
 
 @app.route("/repo-show", methods=["GET", "POST"])
@@ -171,14 +163,13 @@ def repo_show():
     files = []
     for file in config.mongo_db.my_db.fs.files.find({"email": email}):
         files.append(file["filename"])
-    print(files)
-    return render_template("Repository.html", your_list=["a", "b", "c"])
+    return render_template("Repository.html", your_list=files)
 
 
 @app.route("/repo-download", methods=['GET', 'POST'])
 def repo_download():
-    # filename = request.form['filename']
-    filename = "ZiClJf-1920w.jpg"
+    filename = request.form['file']
+    print(filename)
     email = session['email']
     fs = gridfs.GridFS(config.mongo_db.my_db)
     for grid_out in fs.find({"email": email, "filename": filename}):
@@ -191,14 +182,14 @@ def repo_download():
 
 @app.route("/repo-delete", methods=["GET", "POST"])
 def repo_delete():
-    # filename = request.form['filename']
-    filename = "ZiClJf-1920w.jpg"
+    filename = request.form['file']
     email = session['email']
     fs = gridfs.GridFS(config.mongo_db.my_db)
     for file in config.mongo_db.my_db.fs.files.find({"email": email, "filename": filename}):
         id = file["_id"]
     fs.delete(id)
-    return "done"
+    return redirect('/repo-show')
+
 
 
 @app.route("/forum", methods=["GET", "POST"])

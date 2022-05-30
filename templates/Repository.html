@@ -93,24 +93,19 @@
         <!-- Add file -->
 
         <div class="addfile home-content">
-          <form >
+          <form action="/repo-push" method="post" enctype="multipart/form-data">
             <div class="card">
               <div class="card-title">Add Your File</div>
               <div class="fileinput align-items-center m-3">
                 <div class="input-group mb-3">
-                  <input type="file" class="form-control" id="inputGroupFile02" />
-                  <input
-                    class="input-group-text"
-                    type="submit"
-                    for="inputGroupFile02"
+                  <input type="file" class="form-control" name="file" id="inputGroupFile02" />
+                  <input class="input-group-text" for="inputGroupFile02" type="submit"  
+                    >Upload</input
                   >
-                  
-                  </input>
                 </div>
               </div>
+            </div>
           </form>
-          
-          </div>
         </div>
         <div class="allfiles">
           <div class="col">
@@ -119,22 +114,32 @@
                 <h3>
                   {% for your_list_element in your_list %}
                   
+                  <div></div>
+                  
                   <div class="d-flex">
                     <p>{{ your_list_element }}</p>
-                    <button
+                    <form action="/repo-delete" method="post">
+                    <input
                       class="btn btn-common repobtn"
+                      value="{{your_list_element}}"
                       type="submit"
                       title="Remove"
-                    > 
+                      name="file"
+                    >
                       Remove
-                    </button>
-                    <button
+                    </input>
+                  </form>
+                  <form action="/repo-download" method="post">
+                    <input
                       class="btn btn-common repobtn"
+                      value="{{your_list_element}}"
                       type="submit"
                       title="Download"
+                      name="file"
                     >
                       Download
-                    </button>
+                  </input>
+                </form>
                   </div>
                   {% endfor %}
                 </h3>
