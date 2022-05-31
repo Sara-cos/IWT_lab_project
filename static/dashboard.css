@@ -251,6 +251,12 @@ nav .profile-details i {
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+.recent-sales {
+  text-align: center;
+}
+.recent-sales ul {
+  list-style: none;
+}
 .home-content .sales-boxes .sales-details {
   display: flex;
   align-items: center;

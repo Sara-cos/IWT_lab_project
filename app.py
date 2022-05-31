@@ -211,6 +211,10 @@ def forum():
     return render_template("ForumExtended.html", your_list=posts)
 
 
+@app.route("/contactus")
+def contact():
+    return render_template("Contact.html")
+
 if __name__ == '__main__':
     config.logger.log("INFO", "App starting")
     app.run(debug=True)
